@@ -1,6 +1,5 @@
 defmodule ShipmentTest do
   use ExUnit.Case
-  doctest Shipment
 
   @perfect_method %{
     "name" => "Retirada em loja",

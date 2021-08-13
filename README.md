@@ -1,21 +1,27 @@
-# Shipment
+# Shipment CLI
 
-**TODO: Add description**
+Validate CEP (brazilian postal code) CLI
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `shipment` to your list of dependencies in `mix.exs`:
+`mix escript.install github lubien/shipment`
 
-```elixir
-def deps do
-  [
-    {:shipment, "~> 0.1.0"}
-  ]
-end
+## Build
+
+Enter the cloned repo folder then:
+
+```
+mix deps.get
+mix #=> aliased mix.escript_build
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/shipment](https://hexdocs.pm/shipment).
+## Usage
 
+```
+$ mix # build before using at least once
+$ cat priv/fixtures/basic.txt | ./shipment
+```
+
+## License
+
+[MIT](LICENSE.md)

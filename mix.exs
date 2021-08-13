@@ -4,9 +4,12 @@ defmodule Shipment.MixProject do
   def project do
     [
       app: :shipment,
-      version: "0.1.0",
+      escript: escript_config(),
+      default_task: "escript.build",
+      version: "1.0.0",
       elixir: "~> 1.11",
       start_permanent: Mix.env() == :prod,
+      build_embedded: Mix.env() == :prod,
       deps: deps()
     ]
   end
@@ -23,5 +26,9 @@ defmodule Shipment.MixProject do
     [
       {:jason, "~> 1.2"}
     ]
+  end
+
+  defp escript_config do
+    [main_module: Shipment.Cli]
   end
 end
